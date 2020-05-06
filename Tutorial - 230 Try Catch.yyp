@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"string_concatenate","path":"scripts/string_concatenate/string_concatenate.yy",},"order":2,},
     {"id":{"name":"Object","path":"objects/Object/Object.yy",},"order":1,},
     {"id":{"name":"Room","path":"rooms/Room/Room.yy",},"order":0,},
   ],
