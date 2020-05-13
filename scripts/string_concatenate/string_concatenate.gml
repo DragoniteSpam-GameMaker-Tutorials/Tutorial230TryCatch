@@ -1,11 +1,17 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function string_concatenate(value1, value2) {
-    var result = "";
-    try {
-        result = value1 + value2;
-    } catch (everything_is_terrible) {
-        result = "Could not concatenate the two values! " + string(everything_is_terrible.stacktrace);
+    if (!is_string(value1)) {
+        throw {
+            message: "value1 not a string!",
+            callstack: debug_get_callstack(),
+        };
     }
-    return result;
+    if (!is_string(value2)) {
+        throw {
+            message: "value2 not a string!",
+            callstack: debug_get_callstack(),
+        };
+    }
+    return value1 + value2;
 }
