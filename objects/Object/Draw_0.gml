@@ -3,6 +3,8 @@ draw_text(200, 200, string_concatenate("Hello", "world"));
 try {
     draw_text(200, 240, string_concatenate(10, 50));
 } catch (e) {
+    // the caught error will be whatever you threw - it doesn't necessarily have
+    // to be a struct and may be a string, a number, or anything else
     draw_text(200, 240, "Error! " + e.message + " in " + string(e.callstack));
 }
 
